@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>글 수정하기</h1>
+    <form method="POST" class="post-form">
+        {% csrf_token %}  <!--데이터를 토큰화시켜서 안전하게 적용해주는 것-->
+        {{ form.as_p }}
+    <button type="submit" class="save btn btn-default">수정</button>
+    </form>
+</body>
+</html>
